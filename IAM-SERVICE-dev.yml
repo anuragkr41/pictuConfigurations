@@ -1,5 +1,3 @@
-server:
-  port: 8081
 spring:
   application:
     name: IAM-SERVICE
@@ -18,8 +16,8 @@ spring:
   cloud:
     config:
       uri: http://localhost:8085
-#  profiles:
-#    active: dev
+  profiles:
+    active: dev
 #eureka:
 #  instance:
 #    prefer-ip-address: true
