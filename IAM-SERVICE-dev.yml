@@ -1,18 +1,22 @@
 spring:
   datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/pictu_microservices_iam
     username: root
     password: mynewpassword
-    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
-  security:
-    user:
-      name: anurag
-      password: anurag
-      roles: ADMIN
+    
+  eureka:
+    instance:
+      prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
         
 
         
